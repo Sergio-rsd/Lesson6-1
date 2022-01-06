@@ -36,11 +36,9 @@ public class NotesListActivity extends AppCompatActivity implements NotesAdapter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_list);
 
-//        Log.d(TAG, "Flag Repo Before " + flagRepo.isFlagInitRepo());
 
         if (savedInstanceState != null && savedInstanceState.containsKey(RESULT)) {
             flagRepo = (InitRepo) savedInstanceState.getSerializable(RESULT);
-//            Log.d(TAG, "Flag REPO from save INSTANCE " + flagRepo.isFlagInitRepo());
 
         } else if (!flagRepo.isFlagInitRepo()) {
             fillRepo();
